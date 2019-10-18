@@ -1,20 +1,133 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="header">
+  <div class="h1">ReactiveForm Pt II: Assume the worst</div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="main">
+  <div class="section">
+    <div class="h2">Apply today</div>
+
+    <div class="form">
+      <div class="fieldset">
+        <div class="h3">Personal</div>
+
+        <div class="label">First Name</div>
+        <input type="text" />
+
+        <div class="label">Last Name</div>
+        <input type="text" />
+
+        <div class="label">Country</div>
+        <select>
+          <option>USA</option>
+          <option>Mexico</option>
+        </select>
+
+        <div class="label">Why are you applying?</div>
+        <textarea></textarea>
+
+        <div class="label">Years of experience</div>
+        <input type="range" min="0" max="30" />
+
+        <div class="label">Salary expectation</div>
+        <input type="number" />
+      </div>
+
+      <div class="fieldset">
+        <div class="h3">Working hours</div>
+
+        <div class="label">Start</div>
+        <input type="time" />
+
+        <div class="label">End</div>
+        <input type="time" />
+      </div>
+
+      <div class="fieldset">
+        <div class="h3">Frontend</div>
+
+        <div class="label">React</div>
+        <input type="radio" name="react" value="junior" /> Junior <br />
+        <input type="radio" name="react" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="react" value="senior" /> Senior <br />
+
+        <div class="label">Angular</div>
+        <input type="radio" name="angular" value="junior" /> Junior <br />
+        <input type="radio" name="angular" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="angular" value="senior" /> Senior <br />
+
+        <div class="label">Vue</div>
+        <input type="radio" name="vue" value="junior" /> Junior <br />
+        <input type="radio" name="vue" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="vue" value="senior" /> Senior <br />
+      </div>
+
+      <div class="fieldset">
+        <div class="h3">Backend</div>
+
+        <div class="label">NodeJs</div>
+        <input type="radio" name="node" value="junior" /> Junior <br />
+        <input type="radio" name="node" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="node" value="senior" /> Senior <br />
+
+        <div class="label">NestJs</div>
+        <input type="radio" name="nest" value="junior" /> Junior <br />
+        <input type="radio" name="nest" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="nest" value="senior" /> Senior <br />
+
+        <div class="label">Express</div>
+        <input type="radio" name="express" value="junior" /> Junior <br />
+        <input type="radio" name="express" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="express" value="senior" /> Senior <br />
+      </div>
+
+      <div class="fieldset">
+        <div class="h3">Database</div>
+
+        <div class="label">SQL</div>
+        <input type="radio" name="sql" value="junior" /> Junior <br />
+        <input type="radio" name="sql" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="sql" value="senior" /> Senior <br />
+
+        <div class="label">MongoDB</div>
+        <input type="radio" name="mongo" value="junior" /> Junior <br />
+        <input type="radio" name="mongo" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="mongo" value="senior" /> Senior <br />
+
+        <div class="label">Cassandra</div>
+        <input type="radio" name="cassandra" value="junior" /> Junior <br />
+        <input type="radio" name="cassandra" value="semi-senior" /> Semi Senior
+        <br />
+        <input type="radio" name="cassandra" value="senior" /> Senior <br />
+      </div>
+
+      <div class="fieldset">
+        <div class="h3">Extra</div>
+
+        <div class="label">RxJs</div>
+        <input type="checkbox" />
+
+        <div class="label">Redux</div>
+        <input type="checkbox" />
+
+        <div class="label">GraphQL</div>
+        <input type="checkbox" />
+
+        <div class="label">Rest API</div>
+        <input type="checkbox" />
+      </div>
+
+      <div class="button-group">
+        <div class="button primary">Send</div>
+        <div class="button">Cancel</div>
+      </div>
+    </div>
+  </div>
+</div>
