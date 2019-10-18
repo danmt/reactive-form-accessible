@@ -6,126 +6,277 @@
   <div class="section">
     <div class="h2">Apply today</div>
 
-    <div class="form">
+    <div class="form" [formGroup]="developerApplicationForm">
       <div class="fieldset">
         <div class="h3">Personal</div>
 
         <div class="label">First Name</div>
-        <input type="text" />
+        <input type="text" formControlName="firstName" />
 
         <div class="label">Last Name</div>
-        <input type="text" />
+        <input type="text" formControlName="lastName" />
 
         <div class="label">Country</div>
-        <select>
+        <select formControlName="country">
           <option>USA</option>
           <option>Mexico</option>
         </select>
 
         <div class="label">Why are you applying?</div>
-        <textarea></textarea>
+        <textarea formControlName="whyAreYouApplying"></textarea>
 
-        <div class="label">Years of experience</div>
-        <input type="range" min="0" max="30" />
+        <div class="label">Experience in years</div>
+        <input formControlName="experienceInYears" type="number" />
+        years.
 
         <div class="label">Salary expectation</div>
-        <input type="number" />
+        <input
+          formControlName="salaryExpectation"
+          type="range"
+          min="0"
+          max="30"
+        />
       </div>
 
-      <div class="fieldset">
+      <div class="fieldset" formGroupName="workingHours">
         <div class="h3">Working hours</div>
 
         <div class="label">Start</div>
-        <input type="time" />
+        <input formControlName="startAt" type="time" />
 
         <div class="label">End</div>
-        <input type="time" />
+        <input formControlName="endAt" type="time" />
       </div>
 
-      <div class="fieldset">
+      <div class="fieldset" formGroupName="frontend">
         <div class="h3">Frontend</div>
 
         <div class="label">React</div>
-        <input type="radio" name="react" value="junior" /> Junior <br />
-        <input type="radio" name="react" value="semi-senior" /> Semi Senior
+
+        <input
+          formControlName="react"
+          type="radio"
+          name="react"
+          value="junior"
+        />
+        Junior <br />
+        <input
+          formControlName="react"
+          type="radio"
+          name="react"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="react" value="senior" /> Senior <br />
+        <input
+          formControlName="react"
+          type="radio"
+          name="react"
+          value="senior"
+        />
+        Senior <br />
 
         <div class="label">Angular</div>
-        <input type="radio" name="angular" value="junior" /> Junior <br />
-        <input type="radio" name="angular" value="semi-senior" /> Semi Senior
+        <input
+          formControlName="angular"
+          type="radio"
+          name="angular"
+          value="junior"
+        />
+        Junior <br />
+        <input
+          formControlName="angular"
+          type="radio"
+          name="angular"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="angular" value="senior" /> Senior <br />
+        <input
+          formControlName="angular"
+          type="radio"
+          name="angular"
+          value="senior"
+        />
+        Senior <br />
 
         <div class="label">Vue</div>
-        <input type="radio" name="vue" value="junior" /> Junior <br />
-        <input type="radio" name="vue" value="semi-senior" /> Semi Senior
+        <input formControlName="vue" type="radio" name="vue" value="junior" />
+        Junior <br />
+        <input
+          formControlName="vue"
+          type="radio"
+          name="vue"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="vue" value="senior" /> Senior <br />
+        <input formControlName="vue" type="radio" name="vue" value="senior" />
+        Senior <br />
       </div>
 
-      <div class="fieldset">
+      <div class="fieldset" formGroupName="backend">
         <div class="h3">Backend</div>
 
         <div class="label">NodeJs</div>
-        <input type="radio" name="node" value="junior" /> Junior <br />
-        <input type="radio" name="node" value="semi-senior" /> Semi Senior
+        <input
+          formControlName="nodeJs"
+          type="radio"
+          name="nodeJs"
+          value="junior"
+        />
+        Junior <br />
+        <input
+          formControlName="nodeJs"
+          type="radio"
+          name="nodeJs"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="node" value="senior" /> Senior <br />
+        <input
+          formControlName="nodeJs"
+          type="radio"
+          name="nodeJs"
+          value="senior"
+        />
+        Senior <br />
 
         <div class="label">NestJs</div>
-        <input type="radio" name="nest" value="junior" /> Junior <br />
-        <input type="radio" name="nest" value="semi-senior" /> Semi Senior
+        <input
+          formControlName="nestJs"
+          type="radio"
+          name="nestJs"
+          value="junior"
+        />
+        Junior <br />
+        <input
+          formControlName="nestJs"
+          type="radio"
+          name="nestJs"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="nest" value="senior" /> Senior <br />
+        <input
+          formControlName="nestJs"
+          type="radio"
+          name="nestJs"
+          value="senior"
+        />
+        Senior <br />
 
-        <div class="label">Express</div>
-        <input type="radio" name="express" value="junior" /> Junior <br />
-        <input type="radio" name="express" value="semi-senior" /> Semi Senior
+        <div class="label">ExpressJs</div>
+        <input
+          formControlName="expressJs"
+          type="radio"
+          name="expressJs"
+          value="junior"
+        />
+        Junior <br />
+        <input
+          formControlName="expressJs"
+          type="radio"
+          name="expressJs"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="express" value="senior" /> Senior <br />
+        <input
+          formControlName="expressJs"
+          type="radio"
+          name="expressJs"
+          value="senior"
+        />
+        Senior <br />
       </div>
 
-      <div class="fieldset">
+      <div class="fieldset" formGroupName="dataBase">
         <div class="h3">Database</div>
 
         <div class="label">SQL</div>
-        <input type="radio" name="sql" value="junior" /> Junior <br />
-        <input type="radio" name="sql" value="semi-senior" /> Semi Senior
+        <input formControlName="sql" type="radio" name="sql" value="junior" />
+        Junior <br />
+        <input
+          formControlName="sql"
+          type="radio"
+          name="sql"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="sql" value="senior" /> Senior <br />
+        <input formControlName="sql" type="radio" name="sql" value="senior" />
+        Senior <br />
 
         <div class="label">MongoDB</div>
-        <input type="radio" name="mongo" value="junior" /> Junior <br />
-        <input type="radio" name="mongo" value="semi-senior" /> Semi Senior
+        <input
+          formControlName="mongoDb"
+          type="radio"
+          name="mongoDb"
+          value="junior"
+        />
+        Junior <br />
+        <input
+          formControlName="mongoDb"
+          type="radio"
+          name="mongoDb"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="mongo" value="senior" /> Senior <br />
+        <input
+          formControlName="mongoDb"
+          type="radio"
+          name="mongoDb"
+          value="senior"
+        />
+        Senior <br />
 
-        <div class="label">Cassandra</div>
-        <input type="radio" name="cassandra" value="junior" /> Junior <br />
-        <input type="radio" name="cassandra" value="semi-senior" /> Semi Senior
+        <div class="label">DynamoDB</div>
+        <input
+          formControlName="dynamoDb"
+          type="radio"
+          name="dynamoDb"
+          value="junior"
+        />
+        Junior <br />
+        <input
+          formControlName="dynamoDb"
+          type="radio"
+          name="dynamoDb"
+          value="semi-senior"
+        />
+        Semi Senior
         <br />
-        <input type="radio" name="cassandra" value="senior" /> Senior <br />
+        <input
+          formControlName="dynamoDb"
+          type="radio"
+          name="dynamoDb"
+          value="senior"
+        />
+        Senior <br />
       </div>
 
-      <div class="fieldset">
+      <div class="fieldset" formGroupName="extras">
         <div class="h3">Extra</div>
 
         <div class="label">RxJs</div>
-        <input type="checkbox" />
+        <input formControlName="rxjs" type="checkbox" />
 
         <div class="label">Redux</div>
-        <input type="checkbox" />
+        <input formControlName="redux" type="checkbox" />
 
         <div class="label">GraphQL</div>
-        <input type="checkbox" />
+        <input formControlName="graphQl" type="checkbox" />
 
         <div class="label">Rest API</div>
-        <input type="checkbox" />
+        <input formControlName="restApi" type="checkbox" />
       </div>
 
       <div class="button-group">
-        <div class="button primary">Send</div>
+        <div class="button primary" (click)="submit(developerApplicationForm)">
+          Send
+        </div>
         <div class="button">Cancel</div>
       </div>
     </div>
