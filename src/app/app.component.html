@@ -1,62 +1,43 @@
-<header>
-  <h1>ReactiveForm Pt II: Assume the worst</h1>
-</header>
+<div class="header">
+  <div class="h1">ReactiveForm Pt II: Assume the worst</div>
+</div>
 
-<main>
-  <section>
-    <form
-      [formGroup]="developerApplicationForm"
-      (ngSubmit)="submit(developerApplicationForm)"
-      aria-labelledby="form-title"
-    >
-      <legend id="form-title">Developer Application Form</legend>
+<div class="main">
+  <div class="section">
+    <div class="form" [formGroup]="nonAccessibleForm">
+      <div class="legend">Non Accessible Form</div>
 
-      <fieldset id="personal">
-        <legend>Personal Information</legend>
+      <div class="fieldset">
+        <div class="legend">Personal Information</div>
 
-        <label for="first-name">
-          <span id="first-name-label">
+        <div class="label">
+          <span>
             First Name
           </span>
-          <input
-            id="first-name"
-            aria-labelledby="first-name-label"
-            type="text"
-            formControlName="firstName"
-          />
-        </label>
+          <input id="first-name" type="text" formControlName="firstName" />
+        </div>
 
-        <label for="last-name">
-          <span id="last-name-label">
+        <div class="label">
+          <span>
             Last Name
           </span>
-          <input
-            id="last-name"
-            aria-labelledby="last-name-label"
-            type="text"
-            formControlName="lastName"
-          />
-        </label>
+          <input id="last-name" type="text" formControlName="lastName" />
+        </div>
 
-        <label for="email">
-          <span id="email-label">
+        <div class="label">
+          <span>
             Email
           </span>
-          <input
-            id="email"
-            type="email"
-            aria-labelledby="email-label"
-            formControlName="email"
-          />
-        </label>
-      </fieldset>
+          <input id="email" type="email" formControlName="email" />
+        </div>
+      </div>
 
       <div class="button-group">
-        <button type="submit" class="primary">
+        <div (click)="submit(nonAccessibleForm)" class="button primary">
           Send
-        </button>
-        <button>Cancel</button>
+        </div>
+        <div class="button">Cancel</div>
       </div>
-    </form>
-  </section>
-</main>
+    </div>
+  </div>
+</div>
