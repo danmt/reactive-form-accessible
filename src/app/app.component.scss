@@ -1,32 +1,60 @@
-.main {
-  padding: 1rem;
+header {
+  padding: 0 1rem;
 }
 
-.h1 {
+main {
+  padding: 0 1rem;
+}
+
+section {
+  background: lighten(#111, 1);
+}
+
+h1 {
   padding: 0.5rem;
-  font-size: 3rem;
-}
-
-.h2 {
   font-size: 2.5rem;
 }
 
-.h3 {
+form {
+  padding: 1rem;
+  max-width: 720px;
+}
+
+form > legend {
+  padding: 0.5rem;
   font-size: 2rem;
 }
 
-.section {
-  background: lighten(#111, 1);
+fieldset {
+  background: lighten(#111, 4);
+  margin: 2rem 0;
   padding: 1rem;
 }
 
-.form {
-  background: lighten(#111, 2);
-  padding: 1rem;
+fieldset > legend {
+  font-size: 1.5rem;
 }
 
-.label {
-  margin: 0.3rem 0;
+label {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.5rem 0.2rem;
+}
+
+label:focus-within {
+  outline: 2px red solid;
+}
+
+input {
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  width: 100%;
 }
 
 .button {
@@ -49,9 +77,19 @@
   margin-top: 1rem;
 }
 
-.fieldset {
-  background: lighten(#111, 4);
-  border: 1px solid white;
-  padding: 1rem;
-  margin-bottom: 1rem;
+@media all and (min-width: 560px) {
+  fieldset {
+    label span {
+      display: inline-block;
+      width: 30%;
+    }
+
+    textarea {
+      width: 80%;
+    }
+
+    input {
+      width: 60%;
+    }
+  }
 }

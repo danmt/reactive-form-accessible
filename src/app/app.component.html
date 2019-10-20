@@ -1,284 +1,62 @@
-<div class="header">
-  <div class="h1">ReactiveForm Pt II: Assume the worst</div>
-</div>
+<header>
+  <h1>ReactiveForm Pt II: Assume the worst</h1>
+</header>
 
-<div class="main">
-  <div class="section">
-    <div class="h2">Apply today</div>
+<main>
+  <section>
+    <form
+      [formGroup]="developerApplicationForm"
+      (ngSubmit)="submit(developerApplicationForm)"
+      aria-labelledby="form-title"
+    >
+      <legend id="form-title">Developer Application Form</legend>
 
-    <div class="form" [formGroup]="developerApplicationForm">
-      <div class="fieldset">
-        <div class="h3">Personal</div>
+      <fieldset id="personal">
+        <legend>Personal Information</legend>
 
-        <div class="label">First Name</div>
-        <input type="text" formControlName="firstName" />
+        <label for="first-name">
+          <span id="first-name-label">
+            First Name
+          </span>
+          <input
+            id="first-name"
+            aria-labelledby="first-name-label"
+            type="text"
+            formControlName="firstName"
+          />
+        </label>
 
-        <div class="label">Last Name</div>
-        <input type="text" formControlName="lastName" />
+        <label for="last-name">
+          <span id="last-name-label">
+            Last Name
+          </span>
+          <input
+            id="last-name"
+            aria-labelledby="last-name-label"
+            type="text"
+            formControlName="lastName"
+          />
+        </label>
 
-        <div class="label">Country</div>
-        <select formControlName="country">
-          <option>USA</option>
-          <option>Mexico</option>
-        </select>
-
-        <div class="label">Why are you applying?</div>
-        <textarea formControlName="whyAreYouApplying"></textarea>
-
-        <div class="label">Experience in years</div>
-        <input formControlName="experienceInYears" type="number" />
-        years.
-
-        <div class="label">Salary expectation</div>
-        <input
-          formControlName="salaryExpectation"
-          type="range"
-          min="0"
-          max="30"
-        />
-      </div>
-
-      <div class="fieldset" formGroupName="workingHours">
-        <div class="h3">Working hours</div>
-
-        <div class="label">Start</div>
-        <input formControlName="startAt" type="time" />
-
-        <div class="label">End</div>
-        <input formControlName="endAt" type="time" />
-      </div>
-
-      <div class="fieldset" formGroupName="frontend">
-        <div class="h3">Frontend</div>
-
-        <div class="label">React</div>
-
-        <input
-          formControlName="react"
-          type="radio"
-          name="react"
-          value="junior"
-        />
-        Junior <br />
-        <input
-          formControlName="react"
-          type="radio"
-          name="react"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input
-          formControlName="react"
-          type="radio"
-          name="react"
-          value="senior"
-        />
-        Senior <br />
-
-        <div class="label">Angular</div>
-        <input
-          formControlName="angular"
-          type="radio"
-          name="angular"
-          value="junior"
-        />
-        Junior <br />
-        <input
-          formControlName="angular"
-          type="radio"
-          name="angular"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input
-          formControlName="angular"
-          type="radio"
-          name="angular"
-          value="senior"
-        />
-        Senior <br />
-
-        <div class="label">Vue</div>
-        <input formControlName="vue" type="radio" name="vue" value="junior" />
-        Junior <br />
-        <input
-          formControlName="vue"
-          type="radio"
-          name="vue"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input formControlName="vue" type="radio" name="vue" value="senior" />
-        Senior <br />
-      </div>
-
-      <div class="fieldset" formGroupName="backend">
-        <div class="h3">Backend</div>
-
-        <div class="label">NodeJs</div>
-        <input
-          formControlName="nodeJs"
-          type="radio"
-          name="nodeJs"
-          value="junior"
-        />
-        Junior <br />
-        <input
-          formControlName="nodeJs"
-          type="radio"
-          name="nodeJs"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input
-          formControlName="nodeJs"
-          type="radio"
-          name="nodeJs"
-          value="senior"
-        />
-        Senior <br />
-
-        <div class="label">NestJs</div>
-        <input
-          formControlName="nestJs"
-          type="radio"
-          name="nestJs"
-          value="junior"
-        />
-        Junior <br />
-        <input
-          formControlName="nestJs"
-          type="radio"
-          name="nestJs"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input
-          formControlName="nestJs"
-          type="radio"
-          name="nestJs"
-          value="senior"
-        />
-        Senior <br />
-
-        <div class="label">ExpressJs</div>
-        <input
-          formControlName="expressJs"
-          type="radio"
-          name="expressJs"
-          value="junior"
-        />
-        Junior <br />
-        <input
-          formControlName="expressJs"
-          type="radio"
-          name="expressJs"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input
-          formControlName="expressJs"
-          type="radio"
-          name="expressJs"
-          value="senior"
-        />
-        Senior <br />
-      </div>
-
-      <div class="fieldset" formGroupName="dataBase">
-        <div class="h3">Database</div>
-
-        <div class="label">SQL</div>
-        <input formControlName="sql" type="radio" name="sql" value="junior" />
-        Junior <br />
-        <input
-          formControlName="sql"
-          type="radio"
-          name="sql"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input formControlName="sql" type="radio" name="sql" value="senior" />
-        Senior <br />
-
-        <div class="label">MongoDB</div>
-        <input
-          formControlName="mongoDb"
-          type="radio"
-          name="mongoDb"
-          value="junior"
-        />
-        Junior <br />
-        <input
-          formControlName="mongoDb"
-          type="radio"
-          name="mongoDb"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input
-          formControlName="mongoDb"
-          type="radio"
-          name="mongoDb"
-          value="senior"
-        />
-        Senior <br />
-
-        <div class="label">DynamoDB</div>
-        <input
-          formControlName="dynamoDb"
-          type="radio"
-          name="dynamoDb"
-          value="junior"
-        />
-        Junior <br />
-        <input
-          formControlName="dynamoDb"
-          type="radio"
-          name="dynamoDb"
-          value="semi-senior"
-        />
-        Semi Senior
-        <br />
-        <input
-          formControlName="dynamoDb"
-          type="radio"
-          name="dynamoDb"
-          value="senior"
-        />
-        Senior <br />
-      </div>
-
-      <div class="fieldset" formGroupName="extras">
-        <div class="h3">Extra</div>
-
-        <div class="label">RxJs</div>
-        <input formControlName="rxjs" type="checkbox" />
-
-        <div class="label">Redux</div>
-        <input formControlName="redux" type="checkbox" />
-
-        <div class="label">GraphQL</div>
-        <input formControlName="graphQl" type="checkbox" />
-
-        <div class="label">Rest API</div>
-        <input formControlName="restApi" type="checkbox" />
-      </div>
+        <label for="email">
+          <span id="email-label">
+            Email
+          </span>
+          <input
+            id="email"
+            type="email"
+            aria-labelledby="email-label"
+            formControlName="email"
+          />
+        </label>
+      </fieldset>
 
       <div class="button-group">
-        <div class="button primary" (click)="submit(developerApplicationForm)">
+        <button type="submit" class="primary">
           Send
-        </div>
-        <div class="button">Cancel</div>
+        </button>
+        <button>Cancel</button>
       </div>
-    </div>
-  </div>
-</div>
+    </form>
+  </section>
+</main>

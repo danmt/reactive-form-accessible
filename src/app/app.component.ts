@@ -10,35 +10,7 @@ export class AppComponent {
   developerApplicationForm = this.fb.group({
     firstName: [''],
     lastName: [''],
-    country: [''],
-    whyAreYouApplying: [''],
-    experienceInYears: [''],
-    salaryExpectation: [''],
-    workingHours: this.fb.group({
-      startAt: [''],
-      endAt: ['']
-    }),
-    frontend: this.fb.group({
-      angular: [''],
-      react: [''],
-      vue: ['']
-    }),
-    backend: this.fb.group({
-      nodeJs: [''],
-      nestJs: [''],
-      expressJs: ['']
-    }),
-    dataBase: this.fb.group({
-      sql: [''],
-      mongoDb: [''],
-      dynamoDb: ['']
-    }),
-    extras: this.fb.group({
-      rxjs: [false],
-      redux: [false],
-      graphQl: [false],
-      restApi: [false]
-    })
+    email: ['']
   });
 
   constructor(private fb: FormBuilder) {}
