@@ -57,18 +57,20 @@ textarea {
   width: 100%;
 }
 
-.button {
-  width: 3rem;
+button {
+  width: 6rem;
   background-color: lighten(#333, 20);
   padding: 0.5rem;
   text-align: center;
   display: inline-block;
   margin: 0.5rem;
   border: 1px white solid;
+  font-weight: 600;
 }
 
 .primary {
   background-color: red;
+  color: white;
 }
 
 .button-group {

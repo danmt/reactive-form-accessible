@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  developerApplicationForm = this.fb.group({
+  accessibleForm = this.fb.group({
     firstName: [''],
     lastName: [''],
     email: ['']
