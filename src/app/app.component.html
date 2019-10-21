@@ -8,10 +8,11 @@
       [formGroup]="accessibleForm"
       (ngSubmit)="submit(accessibleForm)"
       aria-labelledby="form-title"
+      role="form"
     >
-      <legend id="form-title">Accessible Form</legend>
+      <h2 id="form-title">Accessible Form</h2>
 
-      <fieldset id="personal">
+      <fieldset id="personal" role="group">
         <legend>Personal Information</legend>
 
         <label for="first-name">
