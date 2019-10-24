@@ -14,38 +14,35 @@
       <fieldset id="personal">
         <legend>Personal Information</legend>
 
-        <label for="first-name">
+        <label for="first-name" aria-labelledby="first-name-label">
           <span id="first-name-label">
             First Name
           </span>
           <input
             id="first-name"
-            aria-labelledby="first-name-label"
             type="text"
             formControlName="firstName"
           />
         </label>
 
-        <label for="last-name">
+        <label for="last-name" aria-labelledby="last-name-label">
           <span id="last-name-label">
             Last Name
           </span>
           <input
             id="last-name"
-            aria-labelledby="last-name-label"
             type="text"
             formControlName="lastName"
           />
         </label>
 
-        <label for="email">
+        <label for="email" aria-labelledby="email-label">
           <span id="email-label">
             Email
           </span>
           <input
             id="email"
             type="email"
-            aria-labelledby="email-label"
             formControlName="email"
           />
         </label>
